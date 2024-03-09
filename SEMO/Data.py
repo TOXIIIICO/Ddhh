@@ -65,7 +65,7 @@ async def get_bot_name(bot_username):
       if not name:
         bot = bot_name.find_one({"bot_username": bot_username})
         if not bot:
-            return "نونا"
+            return "مرعب"
         botname[bot_username] = bot["bot_name"]
         return bot["bot_name"]
       return name
@@ -142,7 +142,7 @@ async def set_botch(client: Client, message):
    channel = NAME.text
    bot_username = client.me.username
    await set_channel(bot_username, channel)
-   await message.reply_text("**تم تعين قناه البوت بنجاح -🖱️**")
+   await message.reply_text("**تم تعين قناه البوت بنجاح -🚦⚡**")
    return
 
 @Client.on_message(filters.command("• تعين مجموعة البوت •", ""))
@@ -152,7 +152,7 @@ async def set_botgr(client: Client, message):
    group = NAME.text
    bot_username = client.me.username
    await set_group(bot_username, group)
-   await message.reply_text("**تم تعين مجموعه البوت بنجاح -🖱️**")
+   await message.reply_text("**تم تعين مجموعه البوت بنجاح -🚦⚡**")
    return
 
 
@@ -163,7 +163,7 @@ async def set_botchsr(client: Client, message):
    channelsr = NAME.text
    bot_username = client.me.username
    await set_channelsr(bot_username, channelsr)
-   await message.reply_text("**تم تعين قناه السورس بنجاح -🖱️**")
+   await message.reply_text("**تم تعين قناه السورس بنجاح -🚦⚡**")
    return
 
 @Client.on_message(filters.command("• تعين مجموعة السورس •", ""))
@@ -173,7 +173,7 @@ async def set_botgrsr(client: Client, message):
    groupsr = NAME.text
    bot_username = client.me.username
    await set_groupsr(bot_username, groupsr)
-   await message.reply_text("**تم تعين مجموعه السورس بنجاح -🖱️**")
+   await message.reply_text("**تم تعين مجموعه السورس بنجاح -🚦⚡**")
    return
 
 
@@ -280,7 +280,7 @@ async def set_join_must(client: Client, message):
    m = message.command[0]
    await set_must(bot_username, m)
    if message.command[0] == "• تعطيل الاشتراك الإجباري •":
-     await message.reply_text("**تم تعطيل الاشتراك الإجباري بنجاح -🖱️**")
+     await message.reply_text("**تم تعطيل الاشتراك الإجباري بنجاح -🚦⚡**")
    else:
-     await message.reply_text("**تم تفعيل الاشتراك الإجباري بنجاح -🖱️**")
+     await message.reply_text("**تم تفعيل الاشتراك الإجباري بنجاح -🚦⚡**")
    return

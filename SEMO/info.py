@@ -45,7 +45,7 @@ def changeImageSize(maxWidth, maxHeight, image):
     return newImage
 
 
-ahmed = "https://telegra.ph/file/448774fc5d5a1ea025a5a.jpg"
+ahmed = ""
 
 async def gen_thumb(videoid, photo):
     if os.path.isfile(f"{photo}.png"):
@@ -112,7 +112,7 @@ async def gen_thumb(videoid, photo):
         j = 0
         draw.text(
             (600, 150),
-            "NoNa PlAYiNg",
+            "𝙼𝙾𝚁𝙷𝙴𝙱 PlAYiNg",
             fill="white",
             stroke_width=2,
             stroke_fill="white",
@@ -426,12 +426,12 @@ async def change_stream(bot_username, client, chat_id):
              try:
                 file_path = await download(bot_username, link, video)
              except Exception as es:
-                return await app.send_message(chat_id, f"**حدث خطأ اثناء تشغيل التالي .⚡**")
+                return await app.send_message(chat_id, f"**حدث خطأ اثناء تشغيل التالي .🚦⚡**")
             stream = (AudioVideoPiped(file_path, audio_parameters=audio_stream_quality, video_parameters=video_stream_quality) if video else AudioPiped(file_path, audio_parameters=audio_stream_quality))
             try:
                  await client.change_stream(chat_id, stream)
             except Exception as es:
-                  return await app.send_message(chat_id, f"**حدث خطأ اثناء تشغيل التالي .⚡**")
+                  return await app.send_message(chat_id, f"**حدث خطأ اثناء تشغيل التالي .🚦⚡**")
             userx = await app.get_users(user_id)
             if videoid:
               if userx.photo:
@@ -446,7 +446,7 @@ async def change_stream(bot_username, client, chat_id):
             requester = userx.mention
             gr = await get_group(bot_username)
             ch = await get_channel(bot_username)
-            button = [[InlineKeyboardButton(text="END", callback_data=f"stop"), InlineKeyboardButton(text="RESUME", callback_data=f"resume"), InlineKeyboardButton(text="PAUSE", callback_data=f"pause")], [InlineKeyboardButton(text="𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🖱️", url=f"{ch}"), InlineKeyboardButton(text="𝗚𝗿𝗼𝘂𝗽 🖱️", url=f"{gr}")], [InlineKeyboardButton(text=f"{OWNER_NAME}", url=f"https://t.me/{OWNER[0]}")], [InlineKeyboardButton(text="اضف البوت الي مجموعتك او قناتك ⚡", url=f"https://t.me/{bot_username}?startgroup=True")]]
+            button = [[InlineKeyboardButton(text="END", callback_data=f"stop"), InlineKeyboardButton(text="RESUME", callback_data=f"resume"), InlineKeyboardButton(text="PAUSE", callback_data=f"pause")], [InlineKeyboardButton(text="𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🖱️", url=f"{ch}"), InlineKeyboardButton(text="𝗚𝗿𝗼𝘂𝗽 🖱️", url=f"{gr}")], [InlineKeyboardButton(text=f"{OWNER_NAME}", url=f"https://t.me/{OWNER[0]}")], [InlineKeyboardButton(text="اضف البوت الي مجموعتك او قناتك 🚦⚡", url=f"https://t.me/{bot_username}?startgroup=True")]]
             await app.send_photo(chat_id, photo=img, caption=f"**Starting Streaming **\n\n**Song Name** : {title}\n**Duration Time** {dur}\n**Request By** : {requester}", reply_markup=InlineKeyboardMarkup(button))
             try:
                os.remove(file_path)
@@ -462,7 +462,7 @@ async def helper(bot_username):
    @user.on_message(filters.private)
    async def helperuser(client, update):
      if not update.chat.id in ass[bot_username]:
-      await user.send_message(update.chat.id, f"**انا الحساب الخاص بتشغيل الاغاني ⚡**\n\n**⚡ {gr} : انضم هنا**")
+      await user.send_message(update.chat.id, f"**انا الحساب الخاص بتشغيل الاغاني 🚦⚡**\n\n**🚦⚡ {gr} : انضم هنا**")
       ass[bot_username].append(update.chat.id)
 
 async def Call(bot_username):

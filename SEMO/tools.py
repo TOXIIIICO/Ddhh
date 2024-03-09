@@ -41,14 +41,14 @@ async def analysis(client: Client, message: Message):
  if message.chat.id == dev or message.chat.username in OWNER:
    chats = len(await get_served_chats(client))
    user = len(await get_served_users(client))
-   return await message.reply_text(f"**✅ احصائيات البوت**\n**⚡ المجموعات {chats} مجموعة  **\n**⚡ المستخدمين {user} مستخدم**")
+   return await message.reply_text(f"**✅ احصائيات البوت**\n**🚦⚡ المجموعات {chats} مجموعة  **\n**🚦⚡ المستخدمين {user} مستخدم**")
 
 @Client.on_message(filters.command(["• المجموعات •"], ""))
 async def chats_func(client: Client, message: Message):
  bot_username = client.me.username
  dev = await get_dev(bot_username)
  if message.chat.id == dev or message.chat.username in OWNER:
-    m = await message.reply_text("⚡")
+    m = await message.reply_text("🚦⚡")
     served_chats = []
     text = ""
     chats = await get_served_chats(client)
@@ -89,7 +89,7 @@ async def users_func(client: Client, message: Message):
  bot_username = client.me.username
  dev = await get_dev(bot_username)
  if message.chat.id == dev or message.chat.username in OWNER:
-    m = await message.reply_text("⚡")
+    m = await message.reply_text("🚦⚡")
     served_chats = []
     text = ""
     chats = await get_served_users(client)
@@ -200,7 +200,7 @@ async def cast5(client: Client, message):
    if ask.text == "• الغاء •":
      return await ask.reply_text("**تم الالغاء بنجاح ✅**")
    pn = await client.ask(message.chat.id, "هل تريد تثبيت الاذاعه\nارسل « نعم » او « لا »")
-   await message.reply_text("**جاري الاذاعه انتظر بعض الوقت ..⚡**")
+   await message.reply_text("**جاري الاذاعه انتظر بعض الوقت ..🚦⚡**")
    text = ask.text
    dn = 0
    fd = 0
@@ -229,7 +229,7 @@ async def cast5(client: Client, message):
          except Exception as e:
                     fd += 1
                     continue
-     return await message.reply_text(f"**تمت الاذاعه بنجاح .⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
+     return await message.reply_text(f"**تمت الاذاعه بنجاح .🚦⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
    elif command == "• اذاعه عام بالمساعد •":
      user = await get_userbot(bot_username)
      async for i in user.get_dialogs():
@@ -249,7 +249,7 @@ async def cast5(client: Client, message):
          except Exception as e:
                     fd += 1
                     continue
-     return await message.reply_text(f"**تمت الاذاعه بنجاح .⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
+     return await message.reply_text(f"**تمت الاذاعه بنجاح .🚦⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
    elif command == "• اذاعه للمجموعات بالبوت •":
      chats = await get_served_chats(client)
      chat = []
@@ -272,7 +272,7 @@ async def cast5(client: Client, message):
          except Exception as e:
                     fd += 1
                     continue
-     return await message.reply_text(f"**تمت الاذاعه بنجاح .⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
+     return await message.reply_text(f"**تمت الاذاعه بنجاح .🚦⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
    elif command == "• اذاعه للمجموعات بالمساعد •":
      user = await get_userbot(bot_username)
      async for i in user.get_dialogs():
@@ -293,7 +293,7 @@ async def cast5(client: Client, message):
           except Exception as e:
                     fd += 1
                     continue
-     return await message.reply_text(f"**تمت الاذاعه بنجاح .⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
+     return await message.reply_text(f"**تمت الاذاعه بنجاح .🚦⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
    elif command == "• اذاعه للمستخدمين بالبوت •":
      chats = await get_served_users(client)
      chat = []
@@ -317,7 +317,7 @@ async def cast5(client: Client, message):
          except Exception as e:
                     fd += 1
                     continue
-     return await message.reply_text(f"**تمت الاذاعه بنجاح .⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
+     return await message.reply_text(f"**تمت الاذاعه بنجاح .🚦⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
    elif command == "• اذاعه للمستخدمين بالمساعد •":
      client = await get_userbot(bot_username)
      async for i in client.get_dialogs():
@@ -338,7 +338,7 @@ async def cast5(client: Client, message):
           except Exception as e:
                     fd += 1
                     continue
-     return await message.reply_text(f"**تمت الاذاعه بنجاح .⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
+     return await message.reply_text(f"**تمت الاذاعه بنجاح .🚦⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
    elif command == "• توجيه عام بالبوت •":
      chats = await get_served_chats(client)
      users = await get_served_users(client)
@@ -364,7 +364,7 @@ async def cast5(client: Client, message):
          except Exception as e:
                     fd += 1
                     continue
-     return await message.reply_text(f"**تمت الاذاعه بنجاح .⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
+     return await message.reply_text(f"**تمت الاذاعه بنجاح .🚦⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
    elif command == "• توجيه عام بالمساعد •":
      client = await get_userbot(bot_username)
      async for i in client.get_dialogs():
@@ -388,7 +388,7 @@ async def cast5(client: Client, message):
          except Exception as e:
                     fd += 1
                     continue
-     return await message.reply_text(f"**تمت الاذاعه بنجاح .⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
+     return await message.reply_text(f"**تمت الاذاعه بنجاح .🚦⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
    elif command == "• توجيه للمجموعات بالبوت •":
      chats = await get_served_chats(client)
      chat = []
@@ -411,7 +411,7 @@ async def cast5(client: Client, message):
          except Exception as e:
                     fd += 1
                     continue
-     return await message.reply_text(f"**تمت الاذاعه بنجاح .⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
+     return await message.reply_text(f"**تمت الاذاعه بنجاح .🚦⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
    elif command == "• توجيه للمجموعات بالمساعد •":
      client = await get_userbot(bot_username)
      async for i in client.get_dialogs():
@@ -432,7 +432,7 @@ async def cast5(client: Client, message):
           except Exception as e:
                     fd += 1
                     continue
-     return await message.reply_text(f"**تمت الاذاعه بنجاح .⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
+     return await message.reply_text(f"**تمت الاذاعه بنجاح .🚦⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
    elif command == "• توجيه للمستخدمين بالبوت •":
      chats = await get_served_users(client)
      chat = []
@@ -455,7 +455,7 @@ async def cast5(client: Client, message):
          except Exception as e:
                     fd += 1
                     continue
-     return await message.reply_text(f"**تمت الاذاعه بنجاح .⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
+     return await message.reply_text(f"**تمت الاذاعه بنجاح .🚦⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")
    elif command == "• توجيه للمستخدمين بالمساعد •":
      client = await get_userbot(bot_username)
      async for i in client.get_dialogs():
@@ -476,7 +476,7 @@ async def cast5(client: Client, message):
           except:
                     fd += 1
                     continue
-     return await message.reply_text(f"**تمت الاذاعه بنجاح .⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")    
+     return await message.reply_text(f"**تمت الاذاعه بنجاح .🚦⚡**\n\n**تمت الاذاعه الي : {dn}**\n**وفشل : {fd}**")    
 
 # قسم التحكم ف المساعد
 
@@ -533,8 +533,8 @@ async def userrrrr(client: Client, message):
     end = datetime.now()
     ms = (end - start).seconds
     await mm.edit_text(
-        """**ꜱᴛᴀᴛꜱ ꜰᴇᴀᴛᴄʜᴇᴅ ɪɴ {} ꜱᴇᴄᴏɴᴅꜱ ⚡**
-⚡**ʏᴏᴜ ʜᴀᴠᴇ {} ᴘʀɪᴠᴀᴛᴇ ᴍᴇꜱꜱᴀɢᴇꜱ.**
+        """**ꜱᴛᴀᴛꜱ ꜰᴇᴀᴛᴄʜᴇᴅ ɪɴ {} ꜱᴇᴄᴏɴᴅꜱ 🚦⚡**
+🚦⚡**ʏᴏᴜ ʜᴀᴠᴇ {} ᴘʀɪᴠᴀᴛᴇ ᴍᴇꜱꜱᴀɢᴇꜱ.**
 🏷️**ʏᴏᴜ ʜᴀᴠᴇ ᴊᴏɪɴᴇᴅ {} ɢʀᴏᴜᴘꜱ.**
 🏷️**ʏᴏᴜ ʜᴀᴠᴇ ᴊᴏɪɴᴇᴅ {} ꜱᴜᴘᴇʀ ɢʀᴏᴜᴘꜱ.**
 🏷️**ʏᴏᴜ ʜᴀᴠᴇ ᴊᴏɪɴᴇᴅ {} ᴄʜᴀɴɴᴇʟꜱ.**
@@ -555,7 +555,7 @@ async def changefisrt(client: Client, message):
     name = name.text
     client = await get_userbot(bot_username)
     await client.update_profile(first_name=name)
-    await message.reply_text("**تم تغير اسم الحساب المساعد بنجاح .⚡**")
+    await message.reply_text("**تم تغير اسم الحساب المساعد بنجاح .🚦⚡**")
    except Exception as es:
      await message.reply_text(f" حدث خطأ أثناء تغير الاسم \n {es}")
 
@@ -570,7 +570,7 @@ async def changelast(client: Client, message):
     name = name.text
     client = await get_userbot(bot_username)
     await client.update_profile(last_name=name)
-    await message.reply_text("**تم تغير اسم الحساب المساعد بنجاح .⚡**")
+    await message.reply_text("**تم تغير اسم الحساب المساعد بنجاح .🚦⚡**")
    except Exception as es:
      await message.reply_text(f" حدث خطأ أثناء تغير الاسم \n {es}")
 
@@ -585,7 +585,7 @@ async def changebio(client: Client, message):
     name = name.text
     client = await get_userbot(bot_username)
     await client.update_profile(bio=name)
-    await message.reply_text("**تم تغير البايو بنجاح .⚡**")
+    await message.reply_text("**تم تغير البايو بنجاح .🚦⚡**")
    except Exception as es:
      await message.reply_text(f" حدث خطأ أثناء تغير البايو \n {es}")
 
@@ -600,7 +600,7 @@ async def changeusername(client: Client, message):
     name = name.text
     client = await get_userbot(bot_username)
     await client.set_username(name)
-    await message.reply_text("**تم تغير اسم المستخدم بنجاح .⚡**")
+    await message.reply_text("**تم تغير اسم المستخدم بنجاح .🚦⚡**")
    except Exception as es:
      await message.reply_text(f" حدث خطأ أثناء تغير اسم المستخدم \n {es}")
 
@@ -615,7 +615,7 @@ async def changephoto(client: Client, message):
     photo = await m.download()
     client = await get_userbot(bot_username)
     await client.set_profile_photo(photo=photo)
-    await message.reply_text("**تم تغير صوره الحساب المساعد بنجاح .⚡**") 
+    await message.reply_text("**تم تغير صوره الحساب المساعد بنجاح .🚦⚡**") 
    except Exception as es:
      await message.reply_text(f" حدث خطأ أثناء تغير الصوره \n {es}")
 
@@ -628,7 +628,7 @@ async def changephotos(client: Client, message):
         client = await get_userbot(bot_username)
         photos = await client.get_profile_photos("me")
         await client.delete_profile_photos([p.file_id for p in photos[1:]])
-        await message.reply_text("**تم ازاله صوره بنجاح .⚡**")
+        await message.reply_text("**تم ازاله صوره بنجاح .🚦⚡**")
        except Exception as es:
          await message.reply_text(f" حدث خطأ أثناء ازاله الصوره \n {es}")
 
@@ -646,7 +646,7 @@ async def joined(client: Client, message):
        name = name.replace("https://t.me/", "")
     client = await get_userbot(bot_username)
     await client.join_chat(name)
-    await message.reply_text("**تم انضمام الحساب المساعد بنجاح .⚡**")
+    await message.reply_text("**تم انضمام الحساب المساعد بنجاح .🚦⚡**")
    except Exception as es:
      await message.reply_text(f" حدث خطأ أثناء الانضمام \n {es}")
 
@@ -674,7 +674,7 @@ async def set_history(client: Client, message):
         logger_mode = i["logger_mode"]
         if message.command[0] == "• تغير مكان سجل التشغيل •":
          if i["logger"] == logger:
-           return await ask.reply_text("**هذا هو مكان السجل بالفعل .⚡**")
+           return await ask.reply_text("**هذا هو مكان السجل بالفعل .🚦⚡**")
          else:
           try:
            user = await get_userbot(bot_username)
@@ -693,7 +693,7 @@ async def set_history(client: Client, message):
          mode = "ON" if message.command[0] == "• تفعيل سجل التشغيل •" else "OFF"
          if i["logger_mode"] == mode:
            m = "مفعل" if message.command[0] == "• تفعيل سجل التشغيل •" else "معطل"
-           return await message.reply_text(f"**سجل التشغيل {m} من قبل .⚡**")
+           return await message.reply_text(f"**سجل التشغيل {m} من قبل .🚦⚡**")
          else:
           try:
            hh = {"bot_username": bot_username}

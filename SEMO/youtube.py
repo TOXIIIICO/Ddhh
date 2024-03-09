@@ -20,10 +20,10 @@ from config import OWNER
 async def ytsearch(client, message):
     try:
         if len(message.command) == 1:
-            await message.reply_text("بحث اكتب شيئ للبحث ☢️")
+            await message.reply_text("اكتب شيئ للبحث•••🚦")
             return
         query = message.text.split(None, 1)[1]
-        m = await message.reply_text("جاري البحث انتظر قليلاً ♻️")
+        m = await message.reply_text("جاري البحث انتظر قليلاً•••⚡🚦")
         results = YoutubeSearch(query, max_results=6).to_dict()
         i = 0
         text = ""
@@ -49,17 +49,17 @@ async def downloaded(client: Client, message):
   if message.chat.type == enums.ChatType.PRIVATE :
    ask = await client.ask(message.chat.id, "ارسل اسم الان ")
    query = ask.text
-   m = await ask.reply_text("**جاري البحث انتظر قليلاً 🔎**")
+   m = await ask.reply_text("**جاري البحث انتظر قليلاً 🚦⚡**")
   else:
    try:
     ask = await client.ask(message.chat.id, "ارسل الاسم الان.", filters=filters.user(message.from_user.id), reply_to_message_id=message.id, timeout=8)
    except:
       pass
    query = ask.text
-   m = await ask.reply_text("**جاري البحث انتظر قليلاً ⚡**")
+   m = await ask.reply_text("**جاري البحث انتظر قليلاً 🚦⚡**")
  else:
   query = message.text.split(None, 1)[1]
-  m = await message.reply_text("**جاري البحث انتظر قليلاً .🔎**")
+  m = await message.reply_text("**جاري البحث انتظر قليلاً .🚦⚡**")
   if message.command[0] in ["/song", "نزل", "تنزيل"]:
     ydl_ops = {
         'format': 'bestaudio[ext=m4a]',
@@ -83,7 +83,7 @@ async def downloaded(client: Client, message):
         await m.edit("فشل العثور علي النتيجه المطلوبة ❌")
         return
     try:
-     await m.edit("جاري التحميل انتظر قليلاً⚡")
+     await m.edit("جاري التحميل انتظر قليلاً🚦⚡")
     except:
       pass
     try:
@@ -98,7 +98,7 @@ async def downloaded(client: Client, message):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
         try:
-         await m.edit("جاري التحميل انتظر قليلاً ⚡")
+         await m.edit("جاري التحميل انتظر قليلاً 🚦⚡")
         except:
             pass
         await message.reply_audio(
@@ -143,7 +143,7 @@ async def downloaded(client: Client, message):
         pass
     try:
         try:
-          await m.edit("جاري التحميل انتظر قليلاً ⚡")
+          await m.edit("جاري التحميل انتظر قليلاً 🚦⚡")
         except:
            pass
         with YoutubeDL(ydl_opts) as ytdl:
@@ -153,7 +153,7 @@ async def downloaded(client: Client, message):
         pass
     preview = wget.download(thumbnail)
     try:
-      await m.edit("جاري التحميل انتظر قليلاً ⚡")
+      await m.edit("جاري التحميل انتظر قليلاً 🚦⚡")
     except:
       pass
     await message.reply_video(

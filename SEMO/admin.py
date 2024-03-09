@@ -37,11 +37,11 @@ async def admin_risghts(client: Client, CallbackQuery):
     chat_id = CallbackQuery.message.chat.id
     if command == "pause":
         await call.pause_stream(chat_id)
-        await CallbackQuery.answer("تم ايقاف التشغيل موقتا ☕🍀", show_alert=True)
+        await CallbackQuery.answer("تم ايقاف التشغيل موقتا 🚦⚡", show_alert=True)
         await CallbackQuery.message.reply_text(f"{CallbackQuery.from_user.mention} **تم ايقاف التشغيل بواسطه**")
     if command == "resume":
         await call.resume_stream(chat_id)
-        await CallbackQuery.answer("تم استكمال التشغيل ☕🍀", show_alert=True)
+        await CallbackQuery.answer("تم استكمال التشغيل 🚦⚡", show_alert=True)
         await CallbackQuery.message.reply_text(f"{CallbackQuery.from_user.mention} **تم إستكمال التشغيل بواسطه**")
     if command == "stop":
         try:
@@ -75,7 +75,7 @@ async def admin_risght(client: Client, message):
     chat_id = message.chat.id
     if command == "/pause" or command == "ايقاف مؤقت":
         await call.pause_stream(chat_id)
-        await message.reply_text(f"**تم ايقاف التشغيل موقتاً .♻️**")
+        await message.reply_text(f"**تم ايقاف التشغيل موقتاً .🚦⚡**")
     elif command == "/resume" or command == "استكمال":
         await call.resume_stream(chat_id)
         await message.reply_text(f"**تم إستكمال التشغيل .🚀**")
@@ -159,7 +159,7 @@ async def admin_risght(client: Client, message):
        requester = userx.mention       
        gr = await get_group(bot_username)
        ch = await get_channel(bot_username)
-       button = [[InlineKeyboardButton(text="END", callback_data=f"stop"), InlineKeyboardButton(text="RESUME", callback_data=f"resume"), InlineKeyboardButton(text="PAUSE", callback_data=f"pause")], [InlineKeyboardButton(text="𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🌐", url=f"{ch}"), InlineKeyboardButton(text="𝗚𝗿𝗼𝘂𝗽 ♻️", url=f"{gr}")], [InlineKeyboardButton(text=f"{OWNER_NAME}", url="https://t.me/A_q_lp")], [InlineKeyboardButton(text="اضف البوت الي مجموعتك او قناتك ⚡", url=f"https://t.me/{bot_username}?startgroup=True")]]
+       button = [[InlineKeyboardButton(text="END", callback_data=f"stop"), InlineKeyboardButton(text="RESUME", callback_data=f"resume"), InlineKeyboardButton(text="PAUSE", callback_data=f"pause")], [InlineKeyboardButton(text="𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🌐", url=f"{ch}"), InlineKeyboardButton(text="𝗚𝗿𝗼𝘂𝗽 🚦⚡", url=f"{gr}")], [InlineKeyboardButton(text=f"{OWNER_NAME}", url="https://t.me/HLV_M")], [InlineKeyboardButton(text="اضف البوت الي مجموعتك او قناتك ⚡", url=f"https://t.me/{bot_username}?startgroup=True")]]
        await message.reply_photo(photo=img, caption=f"**Skipped Streaming **\n\n**Song Name** : {title}\n**Duration Time** {dur}\n**Request By** : {requester}", reply_markup=InlineKeyboardMarkup(button))
        try:
            os.remove(file_path)

@@ -12,7 +12,7 @@ async def arbic(client: Client, query: CallbackQuery):
     dev = await get_dev(bot.username)
     devname = await get_dev_name(client, bot.username)
     await query.answer("القائمة الرئيسية")
-    await query.edit_message_text(f"**{query.from_user.mention} : مرحباً بك عزيزي **\n\n**انا بوت تشغيل موسيقى صوتية ومرئية .⚡**\n**قم بإضافة البوت إلي مجموعتك او قناتك .⚡**\n**سيتم تفعيل البوت وانضمام المساعد تلقائياً**\n**في حال مواجهت مشاكل انضم هنا **\n**@ **\n**استخدم الازرار لمعرفه اوامر الاستخدام .⚡ **",
+    await query.edit_message_text(f"**{query.from_user.mention} : مرحباً بك عزيزي **\n\n**انا بوت تشغيل موسيقى صوتية ومرئية .🚦⚡**\n**قم بإضافة البوت إلي مجموعتك او قناتك .🚦⚡**\n**سيتم تفعيل البوت وانضمام المساعد تلقائياً**\n**في حال مواجهت مشاكل انضم هنا **\n**@ **\n**استخدم الازرار لمعرفه اوامر الاستخدام .🚦⚡ **",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -21,7 +21,7 @@ async def arbic(client: Client, query: CallbackQuery):
                         url=f"https://t.me/{bot.username}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("||『مـم ـ ـول علـواآ الاسيوطيي』||", url=f"https://t.me/Elasyoutyy")],
+                [InlineKeyboardButton("𝘼𝙡𝙈𝙤𝙧𝙝𝙚𝙗", url=f"https://t.me/ALH_KAR")],
                 [
                     InlineKeyboardButton("طريقة التشغيل .", callback_data="bcmds"),
                     InlineKeyboardButton("طريقة التفعيل.", callback_data="bhowtouse"),
@@ -67,7 +67,7 @@ Powered By [{OWNER_NAME}]""",
                     )
                 ],
                 [
-                    InlineKeyboardButton("Donate", url=f"https://t.me/Elasyoutyy")
+                    InlineKeyboardButton("Donate", url=f"https://t.me/ALH_KAR")
                 ],
                 [
                     InlineKeyboardButton("Commands", callback_data="cbcmds"),
@@ -103,8 +103,8 @@ async def cbguides(_, query: CallbackQuery):
 4.) **Turn on the video chat first before start to play video/music.**
 5.) **Sometimes, reloading the bot by using /reload command can help you to fix some problem.**
 📌 **If the userbot not joined to video chat, make sure if the video chat already turned on.**
-💡 **If you have a follow-up questions about this bot, you can tell it on my support chat here: @Elasyoutyy2**
-⚡ __ Developer by [{OWNER_NAME}]""",
+💡 **If you have a follow-up questions about this bot, you can tell it on my support chat here: @ALH_KAR**
+🚦⚡ __ Developer by [{OWNER_NAME}]""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Go Back", callback_data="english")]]
         ),
@@ -117,7 +117,7 @@ async def cbcmds(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""✨ **Hello [{query.message.from_user.first_name}](tg://user?id={query.message.from_user.id}) !**
 » **press the button below to read the explanation and see the list of available commands !**
-⚡ __Powered by [{OWNER_NAME}] A.I__""",
+🚦⚡ __Powered by [{OWNER_NAME}] A.I__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -145,7 +145,7 @@ async def cbbasic(_, query: CallbackQuery):
 » /search (query) - search a youtube video link
 » /ping - show the bot ping status
 » /alive - show the bot alive info (in group)
-⚡️ __ Developer by [{OWNER_NAME}]""",
+🚦⚡️ __ Developer by [{OWNER_NAME}]""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
         ),
@@ -162,7 +162,7 @@ async def cbadmin(_, query: CallbackQuery):
 » /skip - switch to next stream
 » /stop - stop the streaming
 » /loop - loop the streaming
-⚡️ __ Developer by [{OWNER_NAME}]""",
+🚦⚡️ __ Developer by [{OWNER_NAME}]""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
         ),
@@ -182,7 +182,7 @@ async def cbsudo(_, query: CallbackQuery):
 » • تفعيل سجل التشغيل • : لتفعيل سجل التشغيل ف المجموعه 
 » • تعطيل سجل التشغيل • : لتعطيل سجل التشغيل ف المجموعه
 » • تغير مكان سجل التشغيل • : لتغير مجموعة السجل
-⚡ __ Developer by [{OWNER_NAME}]""",
+🚦⚡ __ Developer by [{OWNER_NAME}]""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
         ),
@@ -192,16 +192,16 @@ async def cbsudo(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("bhowtouse"))
 async def acbguides(_, query: CallbackQuery):
     await query.edit_message_text(
-        f""" **طريقة تفعيل البوت في مجموعتك ⚡♥️:**
-1.) **اولا قم بإضافة البوت اللي مجموعتك ⚡.**
-2.) **قم بترقيى البوت مشرف مع الصلاحيات المطلوبة ⚡.**
-3.) ** لتحديث قائمة الادمن /Reload قم بكتابة الامر ⚡.**
-3.) ** قم بإضافة الحساب المساعد اللي المجموعة ⚡.**
-4.) **تاكد كن تشغيل المحادثة المرئية ⚡.**
-5.) **لتحديث قائمة الادمنيه /Reload اذا واجهت خطأ قم بكتابة الامر ⚡.**
-📌 ** اذا لم يستطع الحساب المساعد الانضمام اللي المحادثة المرئيه قم بإعادة تشغيل المحادثه ⚡.**
+        f""" **طريقة تفعيل البوت في مجموعتك 🚦⚡♥️:**
+1.) **اولا قم بإضافة البوت اللي مجموعتك 🚦⚡.**
+2.) **قم بترقيى البوت مشرف مع الصلاحيات المطلوبة 🚦⚡.**
+3.) ** لتحديث قائمة الادمن /Reload قم بكتابة الامر 🚦⚡.**
+3.) ** قم بإضافة الحساب المساعد اللي المجموعة 🚦⚡.**
+4.) **تاكد كن تشغيل المحادثة المرئية 🚦⚡.**
+5.) **لتحديث قائمة الادمنيه /Reload اذا واجهت خطأ قم بكتابة الامر 🚦⚡.**
+📌 ** اذا لم يستطع الحساب المساعد الانضمام اللي المحادثة المرئيه قم بإعادة تشغيل المحادثه 🚦⚡.**
 💡 **في حال واجهت اي مشكلة اخري يمكنك التواصل مع المطور من هن : {GROUP} **
-⚡ __ Developer by [{OWNER_NAME}]""",
+🚦⚡ __ Developer by [{OWNER_NAME}]""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("العودة", callback_data="arbic")]]
         ),
@@ -212,8 +212,8 @@ async def acbguides(_, query: CallbackQuery):
 async def acbcmds(_, query: CallbackQuery):
     await query.edit_message_text(
         f""" **Hello [{query.message.from_user.first_name}](tg://user?id={query.message.from_user.id}) !**
-» **اتبع الازرار بالاسفل لمعرفة طريقة التشغيل ⚡**
-⚡ __ Developer by [{OWNER_NAME}]""",
+» **اتبع الازرار بالاسفل لمعرفة طريقة التشغيل 🚦⚡**
+🚦⚡ __ Developer by [{OWNER_NAME}]""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -232,7 +232,7 @@ async def acbcmds(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("bbasic"))
 async def acbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""اوامر التشغيل ⚡:
+        f"""اوامر التشغيل 🚦⚡:
 » شغل او تشغيل - لتشغيل الموسيقى  
 » فيد او فيديو  - لتشغيل مقطع فيديو 
 » تشغيل عشوائي  - لتشغيل اغنيه عشوائية 
@@ -241,7 +241,7 @@ async def acbbasic(_, query: CallbackQuery):
 » نزل + اسم الاغنيه - لتحميل ملف صوتي 
 » بنج - عرض سرعة الاستجابة
 » سورس - لعرض معلومات البوت 
-⚡️ __ Developer by [{OWNER_NAME}]""",
+🚦⚡️ __ Developer by [{OWNER_NAME}]""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("العودة", callback_data="bcmds")]]
         ),
@@ -257,7 +257,7 @@ async def acbadmin(_, query: CallbackQuery):
 » تخطي - لتخطي تشغيل الحالي
 » ايقاف او اسكت - لايقاف تشغيل الحالي 
 » تكرار او كررها - لتكرار التشغيل الحالي
-⚡️ __ Developer by [{OWNER_NAME}]""",
+🚦⚡️ __ Developer by [{OWNER_NAME}]""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("العودة", callback_data="bcmds")]]
         ),
@@ -278,7 +278,7 @@ async def sudo_set(client: Client, query: CallbackQuery):
 » • تعطيل سجل التشغيل • : لتعطيل سجل التشغيل ف المجموعه
 » • تغير مكان سجل التشغيل • : لتغير مجموعة السجل 
 
-⚡ __ Developer by [{OWNER_NAME}]""",
+🚦⚡ __ Developer by [{OWNER_NAME}]""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("العودة", callback_data="bcmds")]]
         ),
