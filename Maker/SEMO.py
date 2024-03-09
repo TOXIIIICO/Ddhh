@@ -15,7 +15,14 @@ import asyncio, os, sys
 from os import system, execle, environ
 
 
-
+mongodb = _mongo_client_(MONGO_DB_URL)
+mo = MongoClient()
+mo = MongoClient(MONGO_DB_URL)
+moo = mo["data"]
+Bots = moo.alli
+db = mongodb.db
+botdb = db.botdb
+blockdb = db.blocked
 ##########//((احصائيات الصانع))##########
 async def data_user(client) -> list:
     data = await get_data(client)
