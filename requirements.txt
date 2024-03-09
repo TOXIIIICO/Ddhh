@@ -1,9 +1,9 @@
 wget
 tgcrypto
 ffmpeg-python
-py-tgcalls
+py-tgcalls==0.9.7
 telethon==1.28.2
-pyrogram==2.0.59
+pyrogram
 youtube-search
 youtube-search-python
 yt-dlp
@@ -11,10 +11,17 @@ python-dotenv
 dnspython
 gitpython
 asgiref
+asSQL
+numpy
+unidecode
+getids
 aiofiles
+dragonxxdlib
+getids
+SpeechRecognition
 aiohttp
 requests
-pillow
+pillow==9.5.0
 heroku3
 psutil
 future
@@ -23,3 +30,4 @@ speedtest-cli
 motor
 pyromod~=1.5
 googletrans
+pytz
